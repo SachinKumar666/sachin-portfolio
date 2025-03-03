@@ -5,7 +5,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import "./Style/Projects.css";
 import Netflix from "../assets/projects/netflix-clone.png";
 import Music from "../assets/projects/music2.png";
-import Canteen from "../assets/projects/canteenimg.png";
+import Canteen from "../assets/projects/canteenImg.png";
 import Sutterbug from "../assets/projects/sutterbug-sketch.png";
 import ProjectPopup from "../components/ProjectPopup";
 
