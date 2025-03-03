@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Style/Navbar.css";
-import profile from "../assets/Images/profile-pic.png";
+import profile from "../assets/images/profile-pic.png";
 
 const resumeUrl = "/resume/Sachin-Kumar-Resume.pdf";
 
