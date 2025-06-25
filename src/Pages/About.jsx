@@ -1,6 +1,7 @@
 import React from "react";
 import "./Style/About.css";
 import AboutPhoto from "../assets/images/image-169.png";
+import SmallAboutPhoto from "../assets/images/myimagebg2.png";
 
 const About = () => {
   return (
@@ -12,26 +13,29 @@ const About = () => {
         </div>
 
         <div className="about-container">
-          <div className="about-image">
+          {/* For desktop view */}
+          <div className="about-image desktop-image">
             <img src={AboutPhoto} alt="Sachin Kumar" />
             <div className="image-overlay"></div>
           </div>
+ 
+          <div className="mobile-header-container">
+            <div className="about-image">
+              <img src={SmallAboutPhoto} alt="Sachin Kumar" />
+              <div className="image-overlay"></div>
+            </div>
+            <h3 className="mobile-name-heading">Hi, I'm Sachin Kumar</h3>
+          </div>
 
-          <div className="about-description">
-            <h3>Hi, I'm Sachin Kumar</h3>
+          <div className="about-description"> 
+            <h3 className="desktop-heading">Hi, I'm Sachin Kumar</h3>
+            
             <p>
               A passionate frontend developer with a keen eye for creating elegant,
               responsive, and user-friendly websites. With expertise in React.js
               and modern web technologies, I transform ideas into seamless digital
               experiences.
             </p>
-            {/* <p>
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing my knowledge with
-              the developer community.
-            </p> */}
-
-           
 
             <div className="about-buttons">
               <button className="about-btn hire-btn">

@@ -26,21 +26,75 @@
   font-size: 1.2rem; 
   font-family: Josefin;
 }
+ 
 .hero-heading {
   font-size: 5rem;
   font-weight: bolder;
-  color:#ff6d38;
+  color: #ff6d38;
   margin-bottom: -11px;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
+
+.hero-heading:hover {
+  color: #ff6d38;
+  text-decoration: none;
+  animation: wave 0.6s ease-in-out;
+}
+
+.hero-heading:hover::after {
+  content: "👋";
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  font-size: 2rem;
+  animation: emojiWave 0.6s ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes emojiWave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 
 /* .hero-heading span{
     font-family: Pacifico;
 } */
 
-.hero-subheading-first {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
+ 
 
 .hero-subheading {
   font-size: 3.5rem;
@@ -49,17 +103,7 @@
   font-family: Josefin;
 }
 
-.hero-subheading-first {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-subheading-first .role {
-  display: inline-block;
-  animation: fade-in-out 3s ease-in-out infinite;
-  color: #fd5b20;
-}
+ 
 
 @keyframes fade-in-out {
   0%,

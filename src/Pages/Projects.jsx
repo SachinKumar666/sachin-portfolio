@@ -20,7 +20,7 @@ const projectsData = [
     liveLink: "https://sachinkumar666.github.io/Netflix-Home-Page-Clone/",
   },
   {
-    title: "Music Aoplication",
+    title: "Music Application",
     description:
       "A music application dashboard that aggregates music from multiple platforms.",
     image: Music,

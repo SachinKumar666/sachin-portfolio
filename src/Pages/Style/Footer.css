@@ -130,11 +130,25 @@
     justify-content: center;
     gap: 0.5rem;
   }
-  
-  .heart-icon {
-    color: #ef4444;
-    animation: heartbeat 1.5s ease infinite;
+  .heart {
+    display: inline-block;
+    animation: heartbeat 1.2s infinite ease-in-out;
+    color: var(--accent-color);  
   }
+  
+  @keyframes heartbeat {
+    0%, 50% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+
   
   .author-name {
     color:  var(--accent-color);
@@ -146,21 +160,7 @@
     0%, 100% { transform: scale(1.1); }
     50% { transform: scale(1.2); }
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-  
-    .footer-section:last-child {
-      grid-column: span 2;
-      text-align: center;
-    }
-  
  
-  }
   
   @media (max-width: 480px) {
     .footer-grid {
@@ -185,7 +185,22 @@
       display: none;
     }
   
- 
+    .copyright p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  
+    .copyright .author-name {
+      display: block;
+      margin-top: 0.2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--accent-color); 
+    }
   }
 
   .glass-card-wrapper {
@@ -234,3 +249,34 @@
     font-size: 2.5em;
     fill: #fff;
   }
+
+
+  @media (max-width: 768px) {
+    
+    .glass-card-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+  
+    .glass-card {
+      margin: 0 !important;
+      width: 100px;
+      height: 100px;
+      flex: 1;
+      border-radius: 12px;
+    }
+  
+    .glass-card::before {
+      font-size: 0.75rem;
+    }
+  
+    .glass-card svg {
+      width: 40px;
+      height: 40px;
+    }
+  
+    
+  }
+  

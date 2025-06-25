@@ -93,15 +93,22 @@
   );
   border-radius: 12px;
 }
+
+/* Hide mobile elements by default */
+.mobile-header-container {
+  display: none;
+}
+
+.mobile-name-heading {
+  display: none;
+}
  
 /* Description Box Styles */
 .about-description {
   width: 45%;
   padding: 3rem;
-  /* background-color: var(--bg-card); */
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
   border: 1px solid rgba(236, 236, 236, 0.158);
   position: relative;
   z-index: 2;
@@ -223,20 +230,42 @@
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - Minimalistic Approach */
 @media (max-width: 1200px) {
   #about {
-    padding: 6rem 4rem;
+    padding: 6rem 5rem;
   }
   
   .about-description {
-    width: 60%;
+    width: 50%;
+    padding: 2.5rem;
+  }
+  
+  .about-title {
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 992px) {
+  #about {
+    padding: 5rem 3rem;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+  }
+  
   .about-description {
-    width: 70%;
+    width: 60%;
+    margin-right: 5%;
+  }
+  
+  .about-description h3 {
+    font-size: 2.2rem;
+  }
+  
+  .about-container {
+    min-height: 500px;
   }
 }
 
@@ -247,15 +276,135 @@
   
   .about-title {
     font-size: 2.5rem;
+    letter-spacing: 0.15em;
   }
   
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust layout for tablets */
   .about-container {
-    justify-content: center;
+    min-height: 450px;
   }
   
   .about-description {
-    width: 90%;
+    width: 75%;
+    margin-right: 3%;
+    padding: 2rem;
+  }
+  
+  .about-description h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-description p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-buttons {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .about-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #about {
+    padding: 3rem 1.5rem;
+  }
+  
+  .about-header {
+    margin-bottom: 3rem;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+  }
+  
+  .about-container {
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Show mobile elements */
+  .mobile-header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Hide desktop elements */
+  .desktop-image {
+    display: none;
+  }
+  
+  .desktop-heading {
+    display: none;
+  }
+  
+  /* Mobile image styling */
+  .about-image {
+    position: relative;
+    height: 150px;
+    width: 40%;
+    margin-right: 5%;
+  }
+  
+  /* Mobile heading styling */
+  .mobile-name-heading {
+    display: block;
+    width: 55%;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .about-description {
+    width: 100%;
     margin-right: 0;
+    padding: 1.5rem;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .about-buttons {
+    gap: 1rem;
+  }
+  
+  .about-btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  .mobile-name-heading {
+    font-size: 1.6rem;
+  }
+  
+  .about-image {
+    height: 120px;
+  }
+  
+  .about-description p {
+    font-size: 0.95rem;
   }
   
   .about-buttons {
